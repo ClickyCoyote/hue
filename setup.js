@@ -8,9 +8,9 @@ module.exports = {
   speed: +process.env.SPEED,
 
   getUsername: async () => {
-    const response = await axios.post(`http://${process.env.HUE_BASEURI}/api`, { devicetype: 'rainbow' })
-    if (response.data[0].error) throw Error('Please press Hue Bridge link button')
-    const username = response.data[0].success.username
+    const { data } = await axios.post(`http://${process.env.HUE_BASEURI}/api`, { devicetype: 'rainbow' })
+    if (data[0].error) throw Error('Please press Hue Bridge link button')
+    const username = data[0].success.username
     fs.appendFile('.env', `HUE_USERNAME=${username}`, (err) => {
       if (err) throw err
     })

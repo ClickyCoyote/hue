@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "rainbow": "node rainbow.js NODE_TLS_REJECT_UNAUTHORIZED=0",
+    "lights": "node lights.js NODE_TLS_REJECT_UNAUTHORIZED=0",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
