@@ -7,4 +7,6 @@
 
 `SPEED`: How fast to change colors 
 
+`$ mv .env.example .env`
+
 `$ npm run rainbow`
